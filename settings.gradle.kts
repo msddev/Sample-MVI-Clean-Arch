@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 rootProject.name = "Sample Application"
 include(":app")
 include(":libraries:testutils")
+include(":libraries:framework")
+include(":libraries:jetframework")
