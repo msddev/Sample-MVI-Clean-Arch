@@ -20,3 +20,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Sample Application"
 include(":app")
+include(":libraries:testutils")

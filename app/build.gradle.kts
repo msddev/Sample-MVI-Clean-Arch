@@ -14,6 +14,7 @@ android {
 
     defaultConfig {
         applicationId = Configs.Id
+        namespace = Configs.Id
         minSdk = Configs.MinSdk
         targetSdk = Configs.TargetSdk
         versionCode = Configs.VersionCode
@@ -21,7 +22,6 @@ android {
         multiDexEnabled = true
         testInstrumentationRunner = Configs.AndroidJunitRunner
         vectorDrawables.useSupportLibrary = true
-        namespace = Configs.Id
     }
 
     setSigningConfigs(project)
@@ -110,4 +110,6 @@ dependencies {
     implementation(DaggerHiltLib.Android)
     kapt(DaggerHiltLib.Compiler)
     implementation(DaggerHiltLib.Compose)
+    // Test
+    addTestDependencies()
 }
