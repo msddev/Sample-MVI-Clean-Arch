@@ -159,15 +159,14 @@ fun DependencyHandler.addStorageDependencies() {
 
 fun DependencyHandler.addTestDependencies() {
     // Test
-//    testImplementation(TestingLib.Junit)
-//    androidTestImplementation(AndroidTestingLib.JunitExt)
-//    androidTestImplementation(AndroidTestingLib.EspressoCore)
-//    testImplementation(TestingLib.Coroutine)
-//    testImplementation(TestingLib.Truth)
-//    testImplementation(TestingLib.Robolectric)
-//    testImplementation(TestingLib.Turbine)
-//    testImplementation(TestingLib.Mockk)
-    TEST
+    testImplementation(TestingLib.Junit)
+    androidTestImplementation(AndroidTestingLib.JunitExt)
+    androidTestImplementation(AndroidTestingLib.EspressoCore)
+    testImplementation(TestingLib.Coroutine)
+    testImplementation(TestingLib.Truth)
+    testImplementation(TestingLib.Robolectric)
+    testImplementation(TestingLib.Turbine)
+    testImplementation(TestingLib.Mockk)
 }
 
 fun DependencyHandler.addModuleDependencies() {

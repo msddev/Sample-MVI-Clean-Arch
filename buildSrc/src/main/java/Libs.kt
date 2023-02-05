@@ -73,11 +73,11 @@ object NetworkLib {
 }
 
 object StorageLib {
-    const val RoomKtx = "androidx.room:room-ktx:2.4.2"
+    const val RoomKtx = "androidx.room:room-ktx:2.5.0"
     const val RoomCompiler = "androidx.room:room-compiler:2.4.2"
     const val DatastorePref = "androidx.datastore:datastore-preferences:1.0.0"
     const val Datastore = "androidx.datastore:datastore:1.0.0"
-    const val SecurityPref = "androidx.security:security-crypto-ktx:1.1.0-alpha03"
+    const val SecurityPref = "androidx.security:security-crypto-ktx:1.1.0-alpha04"
 }
 
 object FirebaseLib {
@@ -105,16 +105,16 @@ object DaggerHiltLib {
 
 object TestingLib {
     const val Junit = "junit:junit:4.13.2"
-    const val Coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0"
+    const val Coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
     const val Truth = "com.google.truth:truth:1.1.3"
     const val Robolectric = "org.robolectric:robolectric:4.7.3"
     const val Turbine = "app.cash.turbine:turbine:0.7.0"
-    const val Mockk = "io.mockk:mockk:1.12.2"
+    const val Mockk = "io.mockk:mockk:1.12.4"
     const val Okhttp = "com.squareup.okhttp3:mockwebserver:5.0.0-alpha.5"
 }
 
 object AndroidTestingLib {
-    const val JunitExt = "androidx.test.ext:junit:1.1.3"
+    const val JunitExt = "androidx.test.ext:junit:1.1.5"
     const val ComposeTestJunit = "androidx.compose.ui:ui-test-junit4:1.3.3"
-    const val EspressoCore = "androidx.test.espresso:espresso-core:3.4.0"
+    const val EspressoCore = "androidx.test.espresso:espresso-core:3.5.1"
 }
