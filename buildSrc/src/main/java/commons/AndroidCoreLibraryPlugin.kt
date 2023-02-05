@@ -21,7 +21,6 @@ class AndroidCoreLibraryPlugin : Plugin<Project> {
     private fun Project.applyPlugins() {
         plugins.apply("com.android.library")
         plugins.apply("org.jetbrains.kotlin.android")
-        plugins.apply("org.jetbrains.kotlin.plugin.parcelize")
         plugins.apply("com.google.devtools.ksp")
         plugins.apply("org.jetbrains.kotlin.kapt")
     }
