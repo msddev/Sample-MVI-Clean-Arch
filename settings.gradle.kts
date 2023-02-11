@@ -18,4 +18,8 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Sample Application"
-include(":app")
+
+include(
+    ":app",
+    ":features:home"
+)
