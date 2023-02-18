@@ -5,7 +5,10 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.framework.extension.launchActivity
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
 
 class SplashActivity : FragmentActivity() {
 
@@ -17,12 +20,12 @@ class SplashActivity : FragmentActivity() {
             splashScreen.setKeepOnScreenCondition { true }
         }
         super.onCreate(savedInstanceState)
-        /*lifecycleScope.launchWhenCreated {
+        lifecycleScope.launchWhenCreated {
             viewModel.startWelcome.collectLatest {
                 delay(3000)
                 if (it) navigateWelcomeActivity() else navigateMainActivity()
             }
-        }*/
+        }
     }
 
     private fun navigateMainActivity() {
@@ -37,7 +40,7 @@ class SplashActivity : FragmentActivity() {
     private fun navigateWelcomeActivity() {
         launchActivity(
             packageName = packageName,
-            className = "com.developersancho.welcome.WelcomeActivity"
+            className = "com.example.welcome.WelcomeActivity"
         ).also {
             finish()
         }
