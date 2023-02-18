@@ -3,6 +3,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -42,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0"
+        kotlinCompilerExtensionVersion = "1.4.2"
     }
     packagingOptions {
         resources {
@@ -64,4 +65,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:${DependencyVersions.compose_version}")
     debugImplementation("androidx.compose.ui:ui-tooling:${DependencyVersions.compose_version}")
     debugImplementation("androidx.compose.ui:ui-test-manifest:${DependencyVersions.compose_version}")
+
+    implementation("io.github.raamcosta.compose-destinations:core:1.8.33-beta")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.8.33-beta")
 }
