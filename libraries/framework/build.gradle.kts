@@ -7,5 +7,5 @@ android {
 }
 
 dependencies {
-
+    implementation(SupportLibs.paging)
 }

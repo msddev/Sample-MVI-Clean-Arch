@@ -15,6 +15,7 @@ dependencies {
     // Modules
     FRAMEWORK
     SAMPLE_FRAMEWORK
+    DOMAIN
     THEME
 
     // Navigation

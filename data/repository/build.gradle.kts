@@ -1,3 +1,5 @@
+import extensions.*
+
 plugins {
     androidCommonLibrary
     androidCommonHilt
@@ -8,5 +10,10 @@ android {
 }
 
 dependencies {
+    FRAMEWORK
+    MODEL
+    LOCAL
+    REMOTE
 
+    implementation(StorageLibs.datastore_pref)
 }

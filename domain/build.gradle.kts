@@ -1,3 +1,5 @@
+import extensions.*
+
 plugins {
     androidCommonLibrary
     androidCommonHilt
@@ -8,5 +10,9 @@ android {
 }
 
 dependencies {
-
+    FRAMEWORK
+    MODEL
+    LOCAL
+    REMOTE
+    REPOSITORY
 }

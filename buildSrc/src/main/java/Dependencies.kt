@@ -17,6 +17,7 @@ object SupportLibs {
     const val activity_ktx = "androidx.activity:activity-ktx:1.6.1"
     const val coroutine_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
     const val coroutine_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    const val paging = "androidx.paging:paging-runtime-ktx:3.1.1"
 }
 
 object ComposeLibs {
@@ -77,4 +78,12 @@ object ComposeTestingLib {
 
 object CommonLibs {
     const val timber = "com.jakewharton.timber:timber:5.0.1"
+}
+
+object StorageLibs {
+    const val room_ktx = "androidx.room:room-ktx:2.5.0"
+    const val room_compiler = "androidx.room:room-compiler:2.5.0"
+    const val datastore_pref = "androidx.datastore:datastore-preferences:1.0.0"
+    const val datastore = "androidx.datastore:datastore:1.0.0"
+    const val security_pref = "androidx.security:security-crypto-ktx:1.1.0-alpha04"
 }
