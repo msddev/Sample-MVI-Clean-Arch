@@ -39,14 +39,6 @@ android {
 }
 
 dependencies {
-    implementation(SupportLibs.core_ktx)
-    implementation(SupportLibs.app_compat)
-    implementation(SupportLibs.material)
-    implementation(SupportLibs.lifecycle_runtime)
-    implementation(SupportLibs.activity_ktx)
-    implementation(SupportLibs.coroutine_core)
-    implementation(SupportLibs.coroutine_android)
-
     // Common
     implementation(CommonLibs.timber)
 

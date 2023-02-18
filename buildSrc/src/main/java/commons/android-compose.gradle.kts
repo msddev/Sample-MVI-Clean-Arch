@@ -6,15 +6,41 @@ plugins {
 }
 
 android {
-    addComposeConfig()
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.compose_compiler
+    }
+
+    packagingOptions {
+        resources.excludes.apply {
+            add("META-INF/AL2.0")
+            add("META-INF/LGPL2.1")
+        }
+    }
 }
 
 dependencies {
-    implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("androidx.compose.ui:ui:${DependencyVersions.compose_version}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${DependencyVersions.compose_version}")
-    implementation("androidx.compose.material3:material3:1.1.0-alpha05")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${DependencyVersions.compose_version}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${DependencyVersions.compose_version}")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:${DependencyVersions.compose_version}")
+    implementation(ComposeLibs.activity)
+    implementation(ComposeLibs.ui)
+    implementation(ComposeLibs.ui_tooling_preview)
+    implementation(ComposeLibs.material)
+    debugImplementation(ComposeLibs.ui_tooling)
+
+    // Accompanist
+    implementation(AccompanistLibs.swipe_refresh)
+    implementation(AccompanistLibs.system_ui_controller)
+    implementation(AccompanistLibs.insets)
+    implementation(AccompanistLibs.placeholder_material)
+    implementation(AccompanistLibs.navigation_material)
+    implementation(AccompanistLibs.permissions)
+    implementation(AccompanistLibs.pager)
+    implementation(AccompanistLibs.pager_indicators)
+    implementation(AccompanistLibs.webview)
+
+    // Test
+    androidTestImplementation(ComposeTestingLib.ui_test_junit)
+    debugImplementation(ComposeTestingLib.ui_test_manifest)
 }

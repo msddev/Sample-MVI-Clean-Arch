@@ -1,23 +1,27 @@
 @file:Suppress("UnstableApiUsage")
 
+import extensions.*
+
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp")
+    androidApplication
+    kotlin(kotlinAndroid)
+    kotlin(kotlinKapt)
+    daggerHilt
+    ksp
 }
 
 android {
-    namespace = "com.example.myapplication"
-    compileSdk = 33
+    namespace = Configs.Id
+    compileSdk = Configs.CompileSdk
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Configs.Id
+        minSdk = Configs.MinSdk
+        targetSdk = Configs.TargetSdk
+        versionCode = Configs.VersionCode
+        versionName = Configs.VersionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Configs.AndroidJunitRunner
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -43,29 +47,76 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.2"
+        kotlinCompilerExtensionVersion = Versions.compose_compiler
     }
     packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-    implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("androidx.compose.ui:ui:${DependencyVersions.compose_version}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${DependencyVersions.compose_version}")
-    implementation("androidx.compose.material3:material3:1.1.0-alpha05")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${DependencyVersions.compose_version}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${DependencyVersions.compose_version}")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:${DependencyVersions.compose_version}")
+    // Modules
+    /*FRAMEWORK
+    SAMPLE_FRAMEWORK
+    THEME
+    PROVIDER
 
-    implementation("io.github.raamcosta.compose-destinations:core:1.8.33-beta")
-    ksp("io.github.raamcosta.compose-destinations:ksp:1.8.33-beta")
+    FEATURE_SPLASH
+    FEATURE_WELCOME
+    FEATURE_HOME
+    FEATURE_CHARACTERS
+    FEATURE_SETTINGS*/
+
+    // Support
+    implementation(SupportLibs.core_ktx)
+    implementation(SupportLibs.lifecycle_runtime)
+
+    // Compose
+    implementation(ComposeLibs.activity)
+    implementation(ComposeLibs.ui)
+    implementation(ComposeLibs.ui_tooling_preview)
+    implementation(ComposeLibs.material_3)
+    debugImplementation(ComposeLibs.ui_tooling)
+
+    // Accompanist
+    implementation(AccompanistLibs.swipe_refresh)
+    implementation(AccompanistLibs.system_ui_controller)
+    implementation(AccompanistLibs.insets)
+    implementation(AccompanistLibs.placeholder_material)
+    implementation(AccompanistLibs.navigation_material)
+    implementation(AccompanistLibs.permissions)
+    implementation(AccompanistLibs.pager)
+    implementation(AccompanistLibs.pager_indicators)
+    implementation(AccompanistLibs.webview)
+
+    // Navigation
+    implementation(NavigationLibs.navigation)
+    implementation(NavigationLibs.destination_core)
+    ksp(NavigationLibs.destination_ksp)
+    implementation(NavigationLibs.destination_animation)
+
+    // Dagger Hilt
+    implementation(DaggerHiltLibs.android)
+    kapt(DaggerHiltLibs.compiler)
+    implementation(DaggerHiltLibs.compose)
+
+    // Navigation
+    implementation(NavigationLibs.navigation)
+    implementation(NavigationLibs.destination_core)
+    ksp(NavigationLibs.destination_ksp)
+    implementation(NavigationLibs.destination_animation)
+
+    // Test
+    testImplementation(TestLibs.junit)
+    androidTestImplementation(AndroidTestingLib.junit_ext)
+    androidTestImplementation(AndroidTestingLib.espresso_core)
+    androidTestImplementation(ComposeTestingLib.ui_test_junit)
+    debugImplementation(ComposeTestingLib.ui_test_manifest)
 }
