@@ -2,10 +2,12 @@ package com.example.splash
 
 import com.example.domain.usecase.welcome.ReadOnBoarding
 import com.example.framework.base.mvvm.MvvmViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
+@HiltViewModel
 class SplashViewModel @Inject constructor(
     private val readOnBoarding: ReadOnBoarding
 ) : MvvmViewModel() {
