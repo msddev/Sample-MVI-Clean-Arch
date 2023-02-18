@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_exit_label">برای خروج دوباره بازگشت را فشار دهید</string>
+    <string name="text_finish">پایان</string>
+</resources>

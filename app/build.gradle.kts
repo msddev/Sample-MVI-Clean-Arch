@@ -63,7 +63,7 @@ android {
 
 dependencies {
     // Modules
-    /*FRAMEWORK
+    FRAMEWORK
     SAMPLE_FRAMEWORK
     THEME
     PROVIDER
@@ -72,7 +72,7 @@ dependencies {
     FEATURE_WELCOME
     FEATURE_HOME
     FEATURE_CHARACTERS
-    FEATURE_SETTINGS*/
+    FEATURE_SETTINGS
 
     // Support
     implementation(SupportLibs.core_ktx)
@@ -82,7 +82,7 @@ dependencies {
     implementation(ComposeLibs.activity)
     implementation(ComposeLibs.ui)
     implementation(ComposeLibs.ui_tooling_preview)
-    implementation(ComposeLibs.material_3)
+    implementation(ComposeLibs.material)
     debugImplementation(ComposeLibs.ui_tooling)
 
     // Accompanist

@@ -11,6 +11,11 @@ android {
     namespace = "com.example.home"
 }
 
+ksp {
+    arg("compose-destinations.mode", "navgraphs")
+    arg("compose-destinations.moduleName", "home")
+}
+
 dependencies {
 
     // Navigation

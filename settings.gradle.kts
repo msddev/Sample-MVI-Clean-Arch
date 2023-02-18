@@ -21,5 +21,18 @@ rootProject.name = "Sample Application"
 
 include(
     ":app",
-    ":features:home"
+    ":features:home",
+    ":features:setting",
+    ":features:characters",
+    ":features:welcome",
+    ":features:splash",
+    ":domain",
+    ":data:local",
+    ":data:remote",
+    ":data:model",
+    ":data:repository",
+    ":common:theme",
+    ":common:provider",
+    ":libraries:framework",
+    ":libraries:sampleframework",
 )
