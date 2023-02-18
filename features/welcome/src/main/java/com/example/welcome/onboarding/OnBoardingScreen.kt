@@ -60,8 +60,7 @@ fun OnBoardingScreen(viewModel: OnBoardingViewModel = hiltViewModel()) {
             modifier = Modifier.weight(1f),
             pagerState = pagerState
         ) {
-            // TODO : masoud
-            // viewModel.saveOnBoardingState(completed = true)
+            viewModel.saveOnBoardingState(completed = true)
             context.getActivity()?.run {
                 launchActivity(
                     packageName = context.packageName,
