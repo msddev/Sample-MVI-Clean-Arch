@@ -3,4 +3,7 @@
 
     <string name="app_exit_label">Press BACK again to exit</string>
     <string name="text_finish">Finish</string>
+
+    <string name="bottom_menu_characters">Characters</string>
+    <string name="bottom_menu_settings">Settings</string>
 </resources>

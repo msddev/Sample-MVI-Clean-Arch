@@ -27,6 +27,7 @@ object ComposeLibs {
     const val ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
     const val material_3 = "androidx.compose.material3:material3:1.1.0-alpha05"
     const val material = "androidx.compose.material:material:1.3.1"
+    const val paging = "androidx.paging:paging-compose:1.0.0-alpha18"
 }
 
 object AccompanistLibs {

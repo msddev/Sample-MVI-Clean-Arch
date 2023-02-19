@@ -17,10 +17,16 @@ ksp {
 }
 
 dependencies {
+    FRAMEWORK
+    PROVIDER
 
     // Navigation
     implementation(NavigationLibs.navigation)
     implementation(NavigationLibs.destination_core)
     ksp(NavigationLibs.destination_ksp)
     implementation(NavigationLibs.destination_animation)
+
+    // Paging
+    implementation(SupportLibs.paging)
+    implementation(ComposeLibs.paging)
 }

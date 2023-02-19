@@ -2,4 +2,7 @@
 <resources>
     <string name="app_exit_label">برای خروج دوباره بازگشت را فشار دهید</string>
     <string name="text_finish">پایان</string>
+
+    <string name="bottom_menu_characters">شخصیت‌ها</string>
+    <string name="bottom_menu_settings">تنظیمات</string>
 </resources>

@@ -17,6 +17,11 @@ ksp {
 }
 
 dependencies {
+    THEME
+    PROVIDER
+
+    FEATURE_CHARACTERS
+    FEATURE_SETTINGS
 
     // Navigation
     implementation(NavigationLibs.navigation)

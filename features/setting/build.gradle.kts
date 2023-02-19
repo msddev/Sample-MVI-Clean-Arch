@@ -17,6 +17,7 @@ ksp {
 }
 
 dependencies {
+    PROVIDER
 
     // Navigation
     implementation(NavigationLibs.navigation)
