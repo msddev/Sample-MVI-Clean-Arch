@@ -11,6 +11,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.characters.list.CharactersScreen
 import com.example.provider.NavigationProvider
@@ -19,6 +20,8 @@ import com.example.theme.RalewayFonts
 import com.example.theme.SampleColors
 import com.example.theme.selectedBottomItemColor
 import com.example.theme.unselectedBottomItemColor
+import com.google.accompanist.insets.navigationBarsHeight
+import com.google.accompanist.insets.navigationBarsPadding
 import com.ramcosta.composedestinations.annotation.Destination
 
 @Destination(start = true)
@@ -64,13 +67,14 @@ private fun HomeBottomNavigation(
     bottomTab: BottomNavigationItem,
     setCurrentBottomTab: (BottomNavigationItem) -> Unit
 ) {
+    val bottomBarHeight = dimensionResource(id = com.example.theme.R.dimen.bottom_bar_height)
     val pages = BottomNavigationItem.values()
 
     BottomNavigation(
         backgroundColor = SampleColors.primary,
         modifier = Modifier
             .fillMaxWidth()
-            .windowInsetsBottomHeight(WindowInsets.navigationBars)
+            .navigationBarsHeight(bottomBarHeight)
     ) {
         pages.forEach { page ->
             val selected = page == bottomTab
