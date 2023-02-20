@@ -18,4 +18,7 @@
 
     <string name="text_language_english">انگلیسی</string>
     <string name="text_language_persian">فارسی</string>
+
+    <string name="toolbar_characters_title">شخصیت‌ها</string>
+    <string name="toolbar_settings_title">تنظیمات</string>
 </resources>

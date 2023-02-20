@@ -2,11 +2,13 @@ package com.example.characters.list
 
 import android.content.res.Configuration
 import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.runtime.*
-import androidx.compose.runtime.R
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
@@ -15,7 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.characters.list.view.CharacterContent
+import com.example.characters.list.view.CharacterFavoriteContent
 import com.example.characters.list.view.FavoriteBottomSheetContent
+import com.example.component.widget.*
 import com.example.framework.base.mvi.BaseViewState
 import com.example.framework.extension.cast
 import com.example.framework.extension.orZero
@@ -208,7 +212,12 @@ private fun CharactersBody(
         sheetShape = RectangleShape,
         content = {
             Scaffold(
-                topBar = { JRToolbar(R.string.toolbar_characters_title, elevation = 0.dp) },
+                topBar = {
+                    SampleToolbar(
+                        com.example.theme.R.string.toolbar_characters_title,
+                        elevation = 0.dp
+                    )
+                },
                 content = { pageContent.invoke(it) }
             )
         }
@@ -221,9 +230,13 @@ private fun CharactersBody(
 fun CharactersScreenPreview() {
     SampleTheme {
         Surface {
-//            CharactersBody() {
-//
-//            }
+            CharactersScreen(
+                modifier = Modifier,
+                navigator = object : NavigationProvider {
+                    override fun openCharacterDetail(characterId: Int) {}
+                    override fun navigateUp() {}
+                }
+            )
         }
     }
 }

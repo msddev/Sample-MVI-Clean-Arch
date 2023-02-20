@@ -21,6 +21,7 @@ dependencies {
     LIBRARY_SAMPLE_FRAMEWORK
     COMMON_PROVIDER
     COMMON_THEME
+    COMMON_COMPONENT
     DATA_MODEL
 
     // Navigation

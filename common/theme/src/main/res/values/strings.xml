@@ -19,4 +19,7 @@
 
     <string name="text_language_english">English</string>
     <string name="text_language_persian">Persian</string>
+
+    <string name="toolbar_characters_title">Characters</string>
+    <string name="toolbar_settings_title">Settings</string>
 </resources>
