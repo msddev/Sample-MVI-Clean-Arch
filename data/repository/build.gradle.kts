@@ -10,10 +10,10 @@ android {
 }
 
 dependencies {
-    FRAMEWORK
-    MODEL
-    LOCAL
-    REMOTE
+    LIBRARY_FRAMEWORK
+    DATA_MODEL
+    DATA_LOCAL
+    DATA_REMOTE
 
     implementation(StorageLibs.datastore_pref)
 }

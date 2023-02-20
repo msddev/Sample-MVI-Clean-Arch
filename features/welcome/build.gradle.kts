@@ -13,10 +13,10 @@ android {
 
 dependencies {
     // Modules
-    FRAMEWORK
-    SAMPLE_FRAMEWORK
+    LIBRARY_FRAMEWORK
+    LIBRARY_SAMPLE_FRAMEWORK
     DOMAIN
-    THEME
+    COMMON_THEME
 
     // Navigation
     implementation(NavigationLibs.navigation)

@@ -10,9 +10,9 @@ android {
 }
 
 dependencies {
-    FRAMEWORK
-    MODEL
-    LOCAL
-    REMOTE
-    REPOSITORY
+    LIBRARY_FRAMEWORK
+    DATA_MODEL
+    DATA_LOCAL
+    DATA_REMOTE
+    DATA_REPOSITORY
 }

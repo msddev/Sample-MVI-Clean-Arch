@@ -18,29 +18,32 @@ val DependencyHandler.FEATURE_HOME
 val DependencyHandler.FEATURE_SPLASH
     get() = implementation(project(mapOf("path" to ":features:splash")))
 
-val DependencyHandler.MODEL
+val DependencyHandler.DATA_MODEL
     get() = implementation(project(mapOf("path" to ":data:model")))
 
-val DependencyHandler.LOCAL
+val DependencyHandler.DATA_LOCAL
     get() = implementation(project(mapOf("path" to ":data:local")))
 
-val DependencyHandler.REMOTE
+val DependencyHandler.DATA_REMOTE
     get() = implementation(project(mapOf("path" to ":data:remote")))
 
-val DependencyHandler.REPOSITORY
+val DependencyHandler.DATA_REPOSITORY
     get() = implementation(project(mapOf("path" to ":data:repository")))
 
 val DependencyHandler.DOMAIN
     get() = implementation(project(mapOf("path" to ":domain")))
 
-val DependencyHandler.FRAMEWORK
+val DependencyHandler.LIBRARY_FRAMEWORK
     get() = implementation(project(mapOf("path" to ":libraries:framework")))
 
-val DependencyHandler.SAMPLE_FRAMEWORK
+val DependencyHandler.LIBRARY_SAMPLE_FRAMEWORK
     get() = implementation(project(mapOf("path" to ":libraries:sampleframework")))
 
-val DependencyHandler.THEME
+val DependencyHandler.COMMON_THEME
     get() = implementation(project(mapOf("path" to ":common:theme")))
 
-val DependencyHandler.PROVIDER
+val DependencyHandler.COMMON_PROVIDER
     get() = implementation(project(mapOf("path" to ":common:provider")))
+
+val DependencyHandler.COMMON_COMPONENT
+    get() = implementation(project(mapOf("path" to ":common:component")))

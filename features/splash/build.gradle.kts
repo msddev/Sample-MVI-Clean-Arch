@@ -10,7 +10,7 @@ android {
 }
 
 dependencies {
-    FRAMEWORK
+    LIBRARY_FRAMEWORK
     DOMAIN
 
     implementation(SupportLibs.splash_screen)

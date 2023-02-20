@@ -17,7 +17,7 @@ ksp {
 }
 
 dependencies {
-    PROVIDER
+    COMMON_PROVIDER
 
     // Navigation
     implementation(NavigationLibs.navigation)

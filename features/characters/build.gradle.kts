@@ -17,8 +17,11 @@ ksp {
 }
 
 dependencies {
-    FRAMEWORK
-    PROVIDER
+    LIBRARY_FRAMEWORK
+    LIBRARY_SAMPLE_FRAMEWORK
+    COMMON_PROVIDER
+    COMMON_THEME
+    DATA_MODEL
 
     // Navigation
     implementation(NavigationLibs.navigation)
@@ -29,4 +32,6 @@ dependencies {
     // Paging
     implementation(SupportLibs.paging)
     implementation(ComposeLibs.paging)
+
+    implementation(ComposeLibs.coil)
 }

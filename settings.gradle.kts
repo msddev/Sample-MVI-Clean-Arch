@@ -33,6 +33,7 @@ include(
     ":data:repository",
     ":common:theme",
     ":common:provider",
+    ":common:component",
     ":libraries:framework",
     ":libraries:sampleframework",
 )

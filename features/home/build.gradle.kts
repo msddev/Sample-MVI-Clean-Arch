@@ -17,8 +17,8 @@ ksp {
 }
 
 dependencies {
-    THEME
-    PROVIDER
+    COMMON_THEME
+    COMMON_PROVIDER
 
     FEATURE_CHARACTERS
     FEATURE_SETTINGS

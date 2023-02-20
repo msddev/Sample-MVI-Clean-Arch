@@ -5,4 +5,17 @@
 
     <string name="bottom_menu_characters">شخصیت‌ها</string>
     <string name="bottom_menu_settings">تنظیمات</string>
+    <string name="text_favor_delete">حذف علاقه مندی</string>
+    <string name="text_cancel">انصراف</string>
+    <string name="text_delete_favor_description">با انجام این عملیات، آیا حذف %s را تایید می کنید؟</string>
+    <string name="text_approve_remove">تاییدیه حذف</string>
+    <string name="text_no_data_found">اطلاعاتی وجود ندارد!</string>
+    <string name="text_retry">تلاش مجدد</string>
+
+    <string name="text_character_list">لیست شخصیت‌ها</string>
+    <string name="text_favorite_list">علاقه‌مندی‌ها</string>
+    <string name="text_characters">شخصیت‌ها</string>
+
+    <string name="text_language_english">انگلیسی</string>
+    <string name="text_language_persian">فارسی</string>
 </resources>

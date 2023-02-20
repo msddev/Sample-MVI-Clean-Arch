@@ -1,4 +1,4 @@
-import extensions.implementation
+import extensions.*
 
 plugins {
     androidCommonFeature
