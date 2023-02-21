@@ -6,7 +6,7 @@ import com.example.repository.welcome.WelcomeRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class ReadOnBoarding @Inject constructor(
+class ReadOnBoardingUseCase @Inject constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val repository: WelcomeRepository
 ) : ReturnUseCase<Unit, Boolean>() {

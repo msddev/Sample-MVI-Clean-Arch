@@ -15,4 +15,7 @@ dependencies {
     DATA_LOCAL
     DATA_REMOTE
     DATA_REPOSITORY
+
+    // Paging
+    implementation(SupportLibs.paging)
 }

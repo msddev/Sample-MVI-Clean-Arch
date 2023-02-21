@@ -1,3 +1,5 @@
+import extensions.*
+
 plugins {
     androidCommonLibrary
     androidCommonHilt
@@ -9,5 +11,9 @@ android {
 }
 
 dependencies {
+    LIBRARY_FRAMEWORK
+    DATA_MODEL
 
+    implementation(StorageLibs.room_ktx)
+    ksp(StorageLibs.room_compiler)
 }

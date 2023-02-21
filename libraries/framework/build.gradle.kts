@@ -1,3 +1,6 @@
+import extensions.implementation
+import extensions.ksp
+
 plugins {
     androidCommonFeature
 }
@@ -15,4 +18,5 @@ dependencies {
     implementation(NetworkLibs.retrofit)
     implementation(NetworkLibs.retrofit_moshi)
 
+    implementation(StorageLibs.room_ktx)
 }

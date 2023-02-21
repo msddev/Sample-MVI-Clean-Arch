@@ -1,6 +1,6 @@
 package com.example.splash
 
-import com.example.domain.usecase.welcome.ReadOnBoarding
+import com.example.domain.usecase.welcome.ReadOnBoardingUseCase
 import com.example.framework.base.mvvm.MvvmViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SplashViewModel @Inject constructor(
-    private val readOnBoarding: ReadOnBoarding
+    private val readOnBoardingUseCase: ReadOnBoardingUseCase
 ) : MvvmViewModel() {
 
     private val _startWelcome = MutableStateFlow(false)
@@ -20,7 +20,7 @@ class SplashViewModel @Inject constructor(
     }
 
     private fun readOnBoardingState() = safeLaunch {
-        call(readOnBoarding(Unit)) { completed ->
+        call(readOnBoardingUseCase(Unit)) { completed ->
             _startWelcome.value = !completed
         }
     }

@@ -1,8 +1,8 @@
 package com.example.domain.di
 
 import android.annotation.SuppressLint
-import com.example.domain.usecase.welcome.ReadOnBoarding
-import com.example.domain.usecase.welcome.SaveOnBoarding
+import com.example.domain.usecase.welcome.ReadOnBoardingUseCase
+import com.example.domain.usecase.welcome.SaveOnBoardingUseCase
 import com.example.repository.welcome.WelcomeRepository
 import dagger.Module
 import dagger.Provides
@@ -17,13 +17,13 @@ class WelcomeModule {
 
     @Singleton
     @Provides
-    fun provideSaveOnBoarding(repository: WelcomeRepository): SaveOnBoarding {
-        return SaveOnBoarding(repository)
+    fun provideSaveOnBoarding(repository: WelcomeRepository): SaveOnBoardingUseCase {
+        return SaveOnBoardingUseCase(repository)
     }
 
     @Singleton
     @Provides
-    fun provideReadOnBoarding(repository: WelcomeRepository): ReadOnBoarding {
-        return ReadOnBoarding(repository)
+    fun provideReadOnBoarding(repository: WelcomeRepository): ReadOnBoardingUseCase {
+        return ReadOnBoardingUseCase(repository)
     }
 }
