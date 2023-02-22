@@ -1,7 +1,8 @@
 package com.example.home
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -11,7 +12,6 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.characters.list.CharactersScreen
 import com.example.provider.NavigationProvider
@@ -34,7 +34,7 @@ fun HomeScreen(
     // In higher-order function, the parameter that is defined as function must have a type (R, T) -> R,
     // so it accepts a function that takes two arguments of types R and T and returns a value of type R.
     val (currentBottomTab, setCurrentBottomTab) = rememberSaveable {
-        mutableStateOf(BottomNavigationItem.CHARACTERS)
+        mutableStateOf(BottomNavigationItem.CHARACTERS) // Default selected tab
     }
 
     val bottomSheetState =

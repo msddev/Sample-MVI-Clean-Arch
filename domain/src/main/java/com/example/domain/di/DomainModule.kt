@@ -8,7 +8,8 @@ import dagger.hilt.components.SingletonComponent
 @SuppressLint("VisibleForTests")
 @Module(
     includes = [
-        WelcomeModule::class
+        WelcomeModule::class,
+        CharacterDomainModule::class
     ]
 )
 @InstallIn(SingletonComponent::class)

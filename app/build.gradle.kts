@@ -20,6 +20,7 @@ android {
         targetSdk = Configs.TargetSdk
         versionCode = Configs.VersionCode
         versionName = Configs.VersionName
+        multiDexEnabled = true
 
         testInstrumentationRunner = Configs.AndroidJunitRunner
         vectorDrawables {
@@ -28,12 +29,21 @@ android {
     }
 
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+            enableUnitTestCoverage = false
+            isDebuggable = true
+            buildConfigField("String", "BASE_URL", "\"${Configs.Debug.BaseUrl}\"")
+            buildConfigField("String", "DB_NAME", "\"${Configs.Debug.DbName}\"")
+        }
         release {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "BASE_URL", "\"${Configs.Release.BaseUrl}\"")
+            buildConfigField("String", "DB_NAME", "\"${Configs.Release.DbName}\"")
         }
     }
     compileOptions {

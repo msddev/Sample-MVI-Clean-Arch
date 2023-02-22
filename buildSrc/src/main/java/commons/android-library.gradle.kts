@@ -1,5 +1,7 @@
 package commons
 
+import com.android.build.api.dsl.BuildType
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -16,10 +18,13 @@ android {
 
     buildTypes {
         release {
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            buildConfigStringField("BASE_URL", Configs.Release.BaseUrl)
+            buildConfigStringField("DB_NAME", Configs.Release.DbName)
+        }
+
+        debug {
+            buildConfigStringField("BASE_URL", Configs.Debug.BaseUrl)
+            buildConfigStringField("DB_NAME", Configs.Debug.DbName)
         }
     }
 
@@ -38,6 +43,10 @@ android {
             isIncludeAndroidResources = true
         }
     }
+}
+
+fun BuildType.buildConfigStringField(name: String, value: String) {
+    this.buildConfigField("String", name, "\"$value\"")
 }
 
 dependencies {

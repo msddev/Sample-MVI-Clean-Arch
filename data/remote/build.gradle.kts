@@ -18,4 +18,7 @@ dependencies {
 
     implementation(NetworkLibs.retrofit)
     implementation(NetworkLibs.retrofit_moshi)
+    implementation(NetworkLibs.logging_interceptor)
+    debugImplementation(NetworkLibs.chucker_debug)
+    releaseImplementation(NetworkLibs.chucker_release)
 }

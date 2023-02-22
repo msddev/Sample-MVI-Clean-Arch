@@ -23,6 +23,7 @@ dependencies {
     COMMON_THEME
     COMMON_COMPONENT
     DATA_MODEL
+    DOMAIN
 
     // Navigation
     implementation(NavigationLibs.navigation)
