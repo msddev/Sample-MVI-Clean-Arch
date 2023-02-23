@@ -17,7 +17,7 @@ dependencyResolutionManagement {
         maven("https://plugins.gradle.org/m2/")
     }
 }
-rootProject.name = "Sample Application"
+rootProject.name = "Rick-Morty"
 
 include(
     ":app",

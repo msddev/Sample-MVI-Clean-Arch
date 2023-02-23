@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Morty And Rick</string>
+    <string name="app_name" translatable="false">Rick-Morty</string>
 
     <string name="app_exit_label">Press BACK again to exit</string>
 
@@ -22,4 +22,13 @@
 
     <string name="toolbar_characters_title">Characters</string>
     <string name="toolbar_settings_title">Settings</string>
+    <string name="text_episodes">Episodes</string>
+    <string name="text_information">Information</string>
+    <string name="text_name">Name</string>
+    <string name="text_gender">Gender</string>
+    <string name="text_species">Species</string>
+    <string name="text_location">Location</string>
+    <string name="text_last_know_location">Last Know Location</string>
+    <string name="toolbar_character_detail_title">Character Detail</string>
+
 </resources>

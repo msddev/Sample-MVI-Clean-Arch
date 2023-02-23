@@ -21,4 +21,13 @@
 
     <string name="toolbar_characters_title">شخصیت‌ها</string>
     <string name="toolbar_settings_title">تنظیمات</string>
+    <string name="text_episodes">اپیزودها</string>
+    <string name="text_information">اطلاعات</string>
+    <string name="text_name">نام</string>
+    <string name="text_gender">جنسیت</string>
+    <string name="text_species">گونه‌ها</string>
+    <string name="text_location">مکان</string>
+    <string name="text_last_know_location">آخرین مکان شناخته شده</string>
+    <string name="toolbar_character_detail_title">جزئیات کاراکتر</string>
+
 </resources>
