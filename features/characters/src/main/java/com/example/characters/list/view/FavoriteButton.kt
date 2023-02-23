@@ -27,11 +27,13 @@ fun FavoriteButton(
 ) {
     var isFavorite by rememberSaveable(dto) { mutableStateOf(dto.isFavorite) }
 
-    IconButton(onClick = {
-        isFavorite = !isFavorite
-        dto.isFavorite = isFavorite
-        viewModel.onTriggerEvent(CharactersEvent.AddOrRemoveFavorite(dto))
-    }) {
+    IconButton(
+        onClick = {
+            isFavorite = !isFavorite
+            dto.isFavorite = isFavorite
+            viewModel.onTriggerEvent(CharactersEvent.AddOrRemoveFavorite(dto))
+        }
+    ) {
         val tintColor = if (isFavorite) Red else Gray500
         Icon(
             painter = rememberVectorPainter(Icons.Default.Favorite),
