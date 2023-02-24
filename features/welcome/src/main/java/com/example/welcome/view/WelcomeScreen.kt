@@ -1,5 +1,8 @@
-package com.example.welcome.onboarding
+package com.example.welcome.view
 
+import android.Manifest
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,17 +27,22 @@ import com.example.framework.extension.getActivity
 import com.example.framework.extension.launchActivity
 import com.example.theme.*
 import com.google.accompanist.pager.*
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
+import com.google.accompanist.permissions.isGranted
+import com.google.accompanist.permissions.rememberPermissionState
 
-@OptIn(ExperimentalPagerApi::class)
+@RequiresApi(Build.VERSION_CODES.TIRAMISU)
+@OptIn(ExperimentalPagerApi::class, ExperimentalPermissionsApi::class)
 @Composable
-fun OnBoardingScreen(viewModel: OnBoardingViewModel = hiltViewModel()) {
+fun WelcomeScreen(viewModel: WelcomeViewModel = hiltViewModel()) {
     val context = LocalContext.current
     val pages = listOf(
-        OnBoardingPage.First,
-        OnBoardingPage.Second,
-        OnBoardingPage.Third
+        WelcomePages.First,
+        WelcomePages.Second,
+        WelcomePages.Third
     )
     val pagerState = rememberPagerState()
+    val permissionState = rememberPermissionState(Manifest.permission.POST_NOTIFICATIONS)
 
     Column(
         modifier = Modifier
@@ -62,11 +70,15 @@ fun OnBoardingScreen(viewModel: OnBoardingViewModel = hiltViewModel()) {
         ) {
             viewModel.saveOnBoardingState(completed = true)
             context.getActivity()?.run {
-                launchActivity(
-                    packageName = context.packageName,
-                    className = "com.example.sampleapplication.navigation.MainActivity"
-                ).also {
-                    finish()
+                if (permissionState.status.isGranted) {
+                    launchActivity(
+                        packageName = context.packageName,
+                        className = "com.example.sampleapplication.navigation.MainActivity"
+                    ).also {
+                        finish()
+                    }
+                } else {
+                    permissionState.launchPermissionRequest()
                 }
             }
         }
@@ -74,7 +86,7 @@ fun OnBoardingScreen(viewModel: OnBoardingViewModel = hiltViewModel()) {
 }
 
 @Composable
-fun PagerScreen(onBoardingPage: OnBoardingPage) {
+fun PagerScreen(onBoardingPage: WelcomePages) {
     Column(
         modifier = Modifier
             .fillMaxWidth(),
@@ -145,8 +157,8 @@ fun FinishButton(
 
 @Preview(showBackground = true)
 @Composable
-fun OnBoardingScreenPreview() {
+fun WelcomeScreenPreview() {
     SampleTheme {
-        OnBoardingScreen()
+        WelcomeScreen()
     }
 }

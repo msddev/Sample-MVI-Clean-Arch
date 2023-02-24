@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentActivity
 import com.example.sampleframework.SetupSystemUi
 import com.example.theme.SampleColors
 import com.example.theme.SampleTheme
-import com.example.welcome.navgraph.WelcomeNavGraph
+import com.example.welcome.view.WelcomeScreen
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,7 +39,7 @@ private fun WelcomeRoot() {
             modifier = Modifier.fillMaxSize(),
             color = SampleColors.background
         ) {
-            WelcomeNavGraph()
+            WelcomeScreen()
         }
     }
 }
