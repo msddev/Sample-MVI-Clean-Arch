@@ -3,11 +3,17 @@ package com.example.sampleapplication.navigation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.ui.platform.LocalContext
 import com.example.framework.extension.toast
+import com.example.provider.LanguageProvider
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var languageProvider: LanguageProvider
 
     private var backPressed = 0L
 
@@ -23,6 +29,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            languageProvider.setLocale(languageProvider.getLanguageCode(), LocalContext.current)
             MainRoot(finish = finish)
         }
     }

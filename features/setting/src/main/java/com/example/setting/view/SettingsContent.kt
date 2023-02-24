@@ -54,10 +54,10 @@ fun SettingsContent(
         ) {
             ConstraintLayout(
                 modifier = Modifier
-                    .padding(16.dp)
             ) {
                 val (
-                    lblThemeMode, switchThemeMode,
+                    lblThemeMode,
+                    switchThemeMode,
                     viewDivider1,
                     lblRateApp,
                     viewDivider2,
@@ -68,17 +68,20 @@ fun SettingsContent(
                     lblAppLanguage,
                     viewDivider5,
                     lblAbout,
+                    lblAppVersion,
                     viewDivider6,
-                    lblAppVersion, tvAppVersion
+                    tvAppVersion
                 ) = createRefs()
 
                 Text(
                     text = stringResource(id = com.example.theme.R.string.text_theme_mode),
                     style = SampleTypography.body2,
-                    modifier = Modifier.constrainAs(lblThemeMode) {
-                        top.linkTo(parent.top)
-                        start.linkTo(parent.start)
-                    }
+                    modifier = Modifier
+                        .constrainAs(lblThemeMode) {
+                            top.linkTo(parent.top)
+                            start.linkTo(parent.start)
+                        }
+                        .padding(16.dp)
                 )
 
                 AndroidView(
@@ -91,16 +94,18 @@ fun SettingsContent(
                             }
                         }
                     },
-                    modifier = Modifier.constrainAs(switchThemeMode) {
-                        top.linkTo(lblThemeMode.top)
-                        bottom.linkTo(lblThemeMode.bottom)
-                        end.linkTo(parent.end)
-                    }
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(end = 16.dp)
+                        .constrainAs(switchThemeMode) {
+                            top.linkTo(lblThemeMode.bottom)
+                            bottom.linkTo(lblThemeMode.bottom)
+                            end.linkTo(parent.end)
+                        }
                 )
 
                 SampleDivider(
                     modifier = Modifier
-                        .padding(top = 12.dp, bottom = 12.dp)
                         .constrainAs(viewDivider1) {
                             start.linkTo(parent.start)
                             end.linkTo(parent.end)
@@ -114,14 +119,14 @@ fun SettingsContent(
                     style = SampleTypography.body2,
                     modifier = Modifier
                         .constrainAs(lblRateApp) {
-                            top.linkTo(viewDivider1.bottom)
+                            top.linkTo(lblThemeMode.bottom)
                             start.linkTo(parent.start)
                         }
+                        .padding(16.dp)
                 )
 
                 SampleDivider(
                     modifier = Modifier
-                        .padding(top = 12.dp, bottom = 12.dp)
                         .constrainAs(viewDivider2) {
                             start.linkTo(parent.start)
                             end.linkTo(parent.end)
@@ -138,14 +143,11 @@ fun SettingsContent(
                             top.linkTo(viewDivider2.bottom)
                             start.linkTo(parent.start)
                         }
-                        .clickableSingle {
-
-                        }
+                        .padding(16.dp)
                 )
 
                 SampleDivider(
                     modifier = Modifier
-                        .padding(top = 12.dp, bottom = 12.dp)
                         .constrainAs(viewDivider3) {
                             start.linkTo(parent.start)
                             end.linkTo(parent.end)
@@ -163,6 +165,7 @@ fun SettingsContent(
                         .clickableSingle {
                             navigator?.openTermAndPrivacy()
                         }
+                        .padding(16.dp)
                 ) {
                     Text(
                         text = stringResource(id = com.example.theme.R.string.text_term_and_privacy),
@@ -183,7 +186,6 @@ fun SettingsContent(
 
                 SampleDivider(
                     modifier = Modifier
-                        .padding(top = 12.dp, bottom = 12.dp)
                         .constrainAs(viewDivider4) {
                             start.linkTo(parent.start)
                             end.linkTo(parent.end)
@@ -201,6 +203,7 @@ fun SettingsContent(
                         .clickableSingle {
                             navigator?.openAppLanguage()
                         }
+                        .padding(16.dp)
                 ) {
                     Text(
                         text = stringResource(id = com.example.theme.R.string.text_app_language),
@@ -221,7 +224,6 @@ fun SettingsContent(
 
                 SampleDivider(
                     modifier = Modifier
-                        .padding(top = 12.dp, bottom = 12.dp)
                         .constrainAs(viewDivider5) {
                             start.linkTo(parent.start)
                             end.linkTo(parent.end)
@@ -239,6 +241,7 @@ fun SettingsContent(
                         .clickableSingle {
                             navigator?.openAbout()
                         }
+                        .padding(16.dp)
                 ) {
                     Text(
                         text = stringResource(id = com.example.theme.R.string.text_about),
@@ -259,7 +262,6 @@ fun SettingsContent(
 
                 SampleDivider(
                     modifier = Modifier
-                        .padding(top = 12.dp, bottom = 12.dp)
                         .constrainAs(viewDivider6) {
                             start.linkTo(parent.start)
                             end.linkTo(parent.end)
@@ -271,21 +273,25 @@ fun SettingsContent(
                 Text(
                     text = stringResource(id = com.example.theme.R.string.text_app_version),
                     style = SampleTypography.body2,
-                    modifier = Modifier.constrainAs(lblAppVersion) {
-                        top.linkTo(viewDivider6.bottom)
-                        bottom.linkTo(parent.bottom)
-                        start.linkTo(parent.start)
-                    }
+                    modifier = Modifier
+                        .constrainAs(lblAppVersion) {
+                            top.linkTo(viewDivider6.bottom)
+                            bottom.linkTo(parent.bottom)
+                            start.linkTo(parent.start)
+                        }
+                        .padding(16.dp)
                 )
 
                 Text(
                     text = version,
                     style = SampleTypography.subtitle1,
-                    modifier = Modifier.constrainAs(tvAppVersion) {
-                        top.linkTo(lblAppVersion.top)
-                        bottom.linkTo(lblAppVersion.bottom)
-                        end.linkTo(parent.end)
-                    }
+                    modifier = Modifier
+                        .constrainAs(tvAppVersion) {
+                            top.linkTo(lblAppVersion.top)
+                            bottom.linkTo(lblAppVersion.bottom)
+                            end.linkTo(parent.end)
+                        }
+                        .padding(16.dp)
                 )
             }
         }

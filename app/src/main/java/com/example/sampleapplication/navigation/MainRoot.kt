@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.provider.shouldUseDarkMode
 import com.example.sampleapplication.provider.AppNavigationProvider
 import com.example.sampleframework.SetupSystemUi
 import com.example.theme.SampleColors
@@ -21,6 +22,8 @@ import com.ramcosta.composedestinations.navigation.dependency
 fun MainRoot(viewModel: MainViewModel = hiltViewModel(), finish: () -> Unit) {
     val navController = rememberNavController()
 
+    val isDarkMode = viewModel.themeProvider().shouldUseDarkMode()
+
     val currentBackStackEntryAsState by navController.currentBackStackEntryAsState()
     val destination = currentBackStackEntryAsState?.destination?.route
         ?: RootNavGraph.startRoute.startRoute.route
@@ -29,7 +32,7 @@ fun MainRoot(viewModel: MainViewModel = hiltViewModel(), finish: () -> Unit) {
         BackHandler { finish() }
     }
 
-    SampleTheme(darkTheme = false) {
+    SampleTheme(darkTheme = isDarkMode) {
         SetupSystemUi(rememberSystemUiController(), SampleColors.primary)
 
         Surface(
