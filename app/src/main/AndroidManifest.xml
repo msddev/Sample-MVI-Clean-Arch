@@ -5,6 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--
+        Starting with Android 13, your apps needs to request the POST_NOTIFICATION permission to
+        the user in order to show notifications. As Chucker also shows notifications to show
+        network activity you need to handle permission request depending on your app features.
+        Without this permission Chucker will track network activity, but there will be no
+        notifications on devices with Android 13 and newer.
+    -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".app.SampleApp"

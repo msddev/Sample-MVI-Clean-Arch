@@ -118,12 +118,6 @@ dependencies {
     kapt(DaggerHiltLibs.compiler)
     implementation(DaggerHiltLibs.compose)
 
-    // Navigation
-    implementation(NavigationLibs.navigation)
-    implementation(NavigationLibs.destination_core)
-    ksp(NavigationLibs.destination_ksp)
-    implementation(NavigationLibs.destination_animation)
-
     // Test
     testImplementation(TestLibs.junit)
     androidTestImplementation(AndroidTestingLib.junit_ext)

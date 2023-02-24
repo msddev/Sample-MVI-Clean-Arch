@@ -46,6 +46,7 @@ fun CharacterRow(
                     .crossfade(true)
                     .build(),
                 placeholder = painterResource(com.example.theme.R.drawable.bg_thumbnail),
+                error = painterResource(com.example.theme.R.drawable.bg_thumbnail),
                 contentDescription = null,
                 modifier = Modifier
                     .padding(8.dp)
