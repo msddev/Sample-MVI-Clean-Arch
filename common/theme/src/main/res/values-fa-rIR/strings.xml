@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_exit_label">برای خروج دوباره بازگشت را فشار دهید</string>
-    <string name="text_finish">پایان</string>
+
+    <string name="toolbar_characters_title">شخصیت‌ها</string>
+    <string name="toolbar_settings_title">تنظیمات</string>
+    <string name="toolbar_character_detail_title">جزئیات کاراکتر</string>
+    <string name="toolbar_about_title">درباره برنامه</string>
+    <string name="toolbar_terms_and_privacy_title">قوانین و حریم خصوصی</string>
+    <string name="toolbar_app_language_title">زبان برنامه</string>
 
     <string name="bottom_menu_characters">شخصیت‌ها</string>
     <string name="bottom_menu_settings">تنظیمات</string>
+
     <string name="text_favor_delete">حذف علاقه مندی</string>
     <string name="text_cancel">انصراف</string>
     <string name="text_delete_favor_description">با انجام این عملیات، آیا حذف %s را تایید می کنید؟</string>
     <string name="text_approve_remove">تاییدیه حذف</string>
     <string name="text_no_data_found">اطلاعاتی وجود ندارد!</string>
     <string name="text_retry">تلاش مجدد</string>
-
+    <string name="text_finish">پایان</string>
     <string name="text_character_list">لیست شخصیت‌ها</string>
     <string name="text_favorite_list">علاقه‌مندی‌ها</string>
     <string name="text_characters">شخصیت‌ها</string>
-
     <string name="text_language_english">انگلیسی</string>
     <string name="text_language_persian">فارسی</string>
-
-    <string name="toolbar_characters_title">شخصیت‌ها</string>
-    <string name="toolbar_settings_title">تنظیمات</string>
     <string name="text_episodes">اپیزودها</string>
     <string name="text_information">اطلاعات</string>
     <string name="text_name">نام</string>
@@ -28,6 +31,11 @@
     <string name="text_species">گونه‌ها</string>
     <string name="text_location">مکان</string>
     <string name="text_last_know_location">آخرین مکان شناخته شده</string>
-    <string name="toolbar_character_detail_title">جزئیات کاراکتر</string>
-
+    <string name="text_theme_mode">تنظیم تم</string>
+    <string name="text_rate_app">امتیاز به برنامه</string>
+    <string name="text_share_app">اشتراک گذاری برنامه</string>
+    <string name="text_term_and_privacy">قوانین و حریم خصوصی</string>
+    <string name="text_app_language">زبان برنامه</string>
+    <string name="text_about">درباره برنامه</string>
+    <string name="text_app_version">نسخه برنامه</string>
 </resources>

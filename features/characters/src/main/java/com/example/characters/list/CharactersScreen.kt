@@ -234,6 +234,9 @@ fun CharactersScreenPreview() {
                 modifier = Modifier,
                 navigator = object : NavigationProvider {
                     override fun openCharacterDetail(characterId: Int) {}
+                    override fun openTermAndPrivacy() {}
+                    override fun openAppLanguage() {}
+                    override fun openAbout() {}
                     override fun navigateUp() {}
                 }
             )

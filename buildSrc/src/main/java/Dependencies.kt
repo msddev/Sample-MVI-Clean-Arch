@@ -45,6 +45,7 @@ object ComposeLibs {
     const val material_icon_extended =
         "androidx.compose.material:material-icons-extended:${Versions.material_icons}"
     const val lottie = "com.airbnb.android:lottie-compose:6.0.0"
+    const val constraint_layout = "androidx.constraintlayout:constraintlayout-compose:1.0.0"
 }
 
 object AccompanistLibs {

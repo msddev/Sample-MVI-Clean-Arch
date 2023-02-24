@@ -18,6 +18,11 @@ ksp {
 
 dependencies {
     COMMON_PROVIDER
+    COMMON_COMPONENT
+    COMMON_THEME
+    LIBRARY_FRAMEWORK
+    LIBRARY_SAMPLE_FRAMEWORK
+    DATA_MODEL
 
     // Navigation
     implementation(NavigationLibs.navigation)
