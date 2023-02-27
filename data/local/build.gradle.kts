@@ -12,6 +12,7 @@ android {
 
 dependencies {
     LIBRARY_FRAMEWORK
+    LIBRARY_TEST_UTILS
     DATA_MODEL
 
     implementation(StorageLibs.room_ktx)

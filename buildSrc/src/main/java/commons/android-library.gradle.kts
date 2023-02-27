@@ -1,6 +1,7 @@
 package commons
 
 import com.android.build.api.dsl.BuildType
+import extensions.*
 
 plugins {
     id("com.android.library")
@@ -42,6 +43,11 @@ android {
         unitTests {
             isIncludeAndroidResources = true
         }
+        unitTests.all {
+            it.systemProperty("robolectric.enabledSdks'", "24")
+            it.systemProperty("robolectric.dependency.repo.id'", "mavenCentral")
+            it.systemProperty("robolectric.dependency.repo.url", "https://repo1.maven.org/maven2")
+        }
     }
 }
 
@@ -52,8 +58,4 @@ fun BuildType.buildConfigStringField(name: String, value: String) {
 dependencies {
     // Common
     implementation(CommonLibs.timber)
-
-    testImplementation(TestLibs.junit)
-    androidTestImplementation(AndroidTestingLib.junit_ext)
-    androidTestImplementation(AndroidTestingLib.espresso_core)
 }

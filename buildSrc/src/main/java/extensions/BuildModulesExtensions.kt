@@ -39,6 +39,9 @@ val DependencyHandler.LIBRARY_FRAMEWORK
 val DependencyHandler.LIBRARY_SAMPLE_FRAMEWORK
     get() = implementation(project(mapOf("path" to ":libraries:sampleframework")))
 
+val DependencyHandler.LIBRARY_TEST_UTILS
+    get() = implementation(project(mapOf("path" to ":libraries:testutils")))
+
 val DependencyHandler.COMMON_THEME
     get() = implementation(project(mapOf("path" to ":common:theme")))
 

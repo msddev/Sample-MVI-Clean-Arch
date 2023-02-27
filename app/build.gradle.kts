@@ -69,6 +69,11 @@ android {
         unitTests {
             isIncludeAndroidResources = true
         }
+        unitTests.all {
+            it.systemProperty("robolectric.enabledSdks'", "24")
+            it.systemProperty("robolectric.dependency.repo.id'", "mavenCentral")
+            it.systemProperty("robolectric.dependency.repo.url", "https://repo1.maven.org/maven2")
+        }
     }
 }
 

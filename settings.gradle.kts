@@ -36,4 +36,5 @@ include(
     ":common:component",
     ":libraries:framework",
     ":libraries:sampleframework",
+    ":libraries:testutils"
 )

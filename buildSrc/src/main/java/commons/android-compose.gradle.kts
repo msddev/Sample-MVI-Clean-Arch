@@ -40,8 +40,4 @@ dependencies {
     implementation(AccompanistLibs.pager)
     implementation(AccompanistLibs.pager_indicators)
     implementation(AccompanistLibs.webview)
-
-    // Test
-    androidTestImplementation(ComposeTestingLib.ui_test_junit)
-    debugImplementation(ComposeTestingLib.ui_test_manifest)
 }

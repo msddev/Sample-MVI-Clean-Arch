@@ -28,6 +28,7 @@ object SupportLibs {
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinx_coroutines}"
     const val coroutine_android =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinx_coroutines}"
+    const val coroutine_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
     const val paging = "androidx.paging:paging-runtime-ktx:3.1.1"
 }
 
@@ -83,6 +84,13 @@ object DaggerHiltLibs {
 
 object TestLibs {
     const val junit = "junit:junit:4.13.2"
+    const val truth = "com.google.truth:truth:1.1.3"
+    const val turbine = "app.cash.turbine:turbine:0.12.1"
+    const val mockk = "io.mockk:mockk:1.13.4"
+    const val mockwebserver = "com.squareup.okhttp3:mockwebserver:5.0.0-alpha.11"
+    const val robolectric = "org.robolectric:robolectric:4.9.2"
+    const val hamcrest_library = "org.hamcrest:hamcrest-library:2.2"
+    const val json = "org.json:json:20220924"
 }
 
 object AndroidTestingLib {
