@@ -63,6 +63,7 @@ android {
     packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "META-INF/*"
         }
     }
     testOptions {
@@ -70,9 +71,10 @@ android {
             isIncludeAndroidResources = true
         }
         unitTests.all {
-            it.systemProperty("robolectric.enabledSdks'", "24")
-            it.systemProperty("robolectric.dependency.repo.id'", "mavenCentral")
+            it.systemProperty("robolectric.dependency.repo.id", "mavenCentral")
             it.systemProperty("robolectric.dependency.repo.url", "https://repo1.maven.org/maven2")
+            /*it.systemProperty("robolectric.dependency.proxy.host", "127.0.0.1")
+            it.systemProperty("robolectric.dependency.proxy.port", "8889")*/
         }
     }
 }
