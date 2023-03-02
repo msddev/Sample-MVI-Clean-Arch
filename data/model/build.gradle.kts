@@ -11,6 +11,7 @@ android {
 
 dependencies {
     LIBRARY_FRAMEWORK
+    LIBRARY_TEST_UTILS
 
     implementation(NetworkLibs.moshi)
     ksp(NetworkLibs.moshi_codegen)

@@ -1,6 +1,4 @@
-import extensions.DATA_MODEL
-import extensions.LIBRARY_FRAMEWORK
-import extensions.implementation
+import extensions.*
 
 plugins {
     androidCommonLibrary
@@ -14,6 +12,7 @@ android {
 
 dependencies {
     LIBRARY_FRAMEWORK
+    LIBRARY_TEST_UTILS
     DATA_MODEL
 
     implementation(NetworkLibs.retrofit)

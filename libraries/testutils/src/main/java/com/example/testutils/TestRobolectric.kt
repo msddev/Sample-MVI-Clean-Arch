@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022, developersancho
- * All rights reserved.
- */
 package com.example.testutils
 
 import android.app.Application
