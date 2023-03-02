@@ -32,9 +32,6 @@ dependencies {
     ksp(NavigationLibs.destination_ksp)
     implementation(NavigationLibs.destination_animation)
 
-    implementation(ComposeLibs.material_icon_core)
-    implementation(ComposeLibs.material_icon_extended)
-
     // Paging
     implementation(SupportLibs.paging)
     implementation(ComposeLibs.paging)

@@ -41,10 +41,6 @@ object ComposeLibs {
     const val material = "androidx.compose.material:material:1.3.1"
     const val paging = "androidx.paging:paging-compose:1.0.0-alpha18"
     const val coil = "io.coil-kt:coil-compose:2.2.2"
-    const val material_icon_core =
-        "androidx.compose.material:material-icons-core:${Versions.material_icons}"
-    const val material_icon_extended =
-        "androidx.compose.material:material-icons-extended:${Versions.material_icons}"
     const val lottie = "com.airbnb.android:lottie-compose:6.0.0"
     const val constraint_layout = "androidx.constraintlayout:constraintlayout-compose:1.0.0"
 }

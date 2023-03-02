@@ -30,6 +30,7 @@ android {
 
     buildTypes {
         debug {
+            isMinifyEnabled = true
             signingConfig = signingConfigs.getByName("debug")
             enableUnitTestCoverage = false
             isDebuggable = true
