@@ -180,12 +180,7 @@ This project uses many of the popular libraries, plugins and tools of the androi
     - [Truth](https://github.com/google/truth) - Truth makes your test assertions and failure messages more readable.
     - [Coroutine-Test](https://github.com/Kotlin/kotlinx.coroutines/tree/master/kotlinx-coroutines-test) - Provides testing utilities for effectively testing coroutines.
     - ...
-
 ## ✍️ Authors
-
-<a href="https://www.linkedin.com/in/mesut-g-33b41030" target="_blank">
-  <img src="https://avatars.githubusercontent.com/u/30066734?v=4" width="70" align="left">
-</a>
 
 👤 **Masoud Khoshkam**
 
