@@ -119,10 +119,10 @@ The ```features``` layer contains components involved in showing information to 
 | Light | <img src="art/screenshots/characters.png" width="250">       | <img src="art/screenshots/characters-favs.png" width="250">     | <img src="art/screenshots/character-detail.png" width="250">     |
 | Dark  | <img src="art/screenshots/characters-dark.png" width="250">  | <img src="art/screenshots/characters-favs-dark.png" width="250">| <img src="art/screenshots/character-detail-dark.png" width="250">|
 
-| Mode  | Settings                                                  | About                                                 | Language                                                 |
-|-------|-----------------------------------------------------------|-------------------------------------------------------|----------------------------------------------------------|
-| Light | <img src="art/screenshots/settings.png" width="250">      | <img src="art/screenshots/about.png" width="250">     | <img src="art/screenshots/language.png" width="250">     |
-| Dark  | <img src="art/screenshots/settings-dark.png" width="250"> | <img src="art/screenshots/about-dark.png" width="250">| <img src="art/screenshots/language-dark.png" width="250">|
+| Mode  | Settings                                                  | Language                                                 |
+|-------|-----------------------------------------------------------|----------------------------------------------------------|
+| Light | <img src="art/screenshots/settings.png" width="250">      | <img src="art/screenshots/language.png" width="250">     |
+| Dark  | <img src="art/screenshots/settings-dark.png" width="250"> | <img src="art/screenshots/language-dark.png" width="250">|
 
 
 # Tech Stacks
