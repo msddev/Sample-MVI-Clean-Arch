@@ -1,7 +1,6 @@
 package com.example.characters.detail
 
-import com.developersancho.domain.mockdata.MockData
-import com.example.characters.detail.CharacterDetailEvent
+import com.example.characters.mockdata.MockData
 import org.junit.Assert
 import org.junit.Test
 
