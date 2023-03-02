@@ -27,8 +27,8 @@ dependencies {
     implementation(ComposeLibs.ui)
     implementation(ComposeLibs.ui_tooling_preview)
     implementation(ComposeLibs.material)
+    implementation(ComposeLibs.constraint_layout)
     debugImplementation(ComposeLibs.ui_tooling)
-    debugImplementation(ComposeLibs.constraint_layout)
 
     // Accompanist
     implementation(AccompanistLibs.swipe_refresh)
