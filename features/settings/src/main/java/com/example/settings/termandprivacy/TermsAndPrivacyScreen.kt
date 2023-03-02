@@ -1,4 +1,4 @@
-package com.example.setting.termandprivacy
+package com.example.settings.termandprivacy
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

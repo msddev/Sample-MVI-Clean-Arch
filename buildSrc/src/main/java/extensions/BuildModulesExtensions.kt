@@ -7,7 +7,7 @@ val DependencyHandler.FEATURE_WELCOME
     get() = implementation(project(mapOf("path" to ":features:welcome")))
 
 val DependencyHandler.FEATURE_SETTINGS
-    get() = implementation(project(mapOf("path" to ":features:setting")))
+    get() = implementation(project(mapOf("path" to ":features:settings")))
 
 val DependencyHandler.FEATURE_CHARACTERS
     get() = implementation(project(mapOf("path" to ":features:characters")))

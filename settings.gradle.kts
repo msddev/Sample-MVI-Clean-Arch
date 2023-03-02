@@ -22,7 +22,7 @@ rootProject.name = "Rick-Morty"
 include(
     ":app",
     ":features:home",
-    ":features:setting",
+    ":features:settings",
     ":features:characters",
     ":features:welcome",
     ":features:splash",

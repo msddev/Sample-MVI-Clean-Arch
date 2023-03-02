@@ -1,6 +1,6 @@
 @file:Suppress("MaximumLineLength", "TopLevelPropertyNaming", "MaxLineLength")
 
-package com.example.setting.termandprivacy
+package com.example.settings.termandprivacy
 
 const val termsAndConditions = "<!DOCTYPE html>\n" +
     "    <html>\n" +

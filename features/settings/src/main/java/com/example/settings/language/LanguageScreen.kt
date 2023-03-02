@@ -1,4 +1,4 @@
-package com.example.setting.language
+package com.example.settings.language
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background

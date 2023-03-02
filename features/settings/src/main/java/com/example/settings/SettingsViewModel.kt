@@ -1,4 +1,4 @@
-package com.example.setting
+package com.example.settings
 
 import androidx.lifecycle.ViewModel
 import com.example.provider.ThemeProvider

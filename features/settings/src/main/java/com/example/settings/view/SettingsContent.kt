@@ -1,6 +1,6 @@
 @file:Suppress("LongMethod")
 
-package com.example.setting.view
+package com.example.settings.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
@@ -28,7 +28,7 @@ import com.example.component.widget.ThemeSwitch
 import com.example.framework.extension.appVersion
 import com.example.provider.NavigationProvider
 import com.example.sampleframework.clickableSingle
-import com.example.setting.SettingsViewModel
+import com.example.settings.SettingsViewModel
 import com.example.theme.Gray400
 import com.example.theme.SampleTheme
 import com.example.theme.SampleTypography

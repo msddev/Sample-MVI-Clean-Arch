@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.setting"
+    namespace = "com.example.settings"
 }
 
 ksp {
     arg("compose-destinations.mode", "navgraphs")
-    arg("compose-destinations.moduleName", "setting")
+    arg("compose-destinations.moduleName", "settings")
 }
 
 dependencies {

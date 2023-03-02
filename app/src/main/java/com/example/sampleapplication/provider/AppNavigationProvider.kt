@@ -3,9 +3,9 @@ package com.example.sampleapplication.provider
 import androidx.navigation.NavController
 import com.example.characters.detail.destinations.CharacterDetailScreenDestination
 import com.example.provider.NavigationProvider
-import com.example.setting.destinations.AboutScreenDestination
-import com.example.setting.destinations.LanguageScreenDestination
-import com.example.setting.destinations.TermsAndPrivacyScreenDestination
+import com.example.settings.destinations.AboutScreenDestination
+import com.example.settings.destinations.LanguageScreenDestination
+import com.example.settings.destinations.TermsAndPrivacyScreenDestination
 
 class AppNavigationProvider constructor(
     private val navController: NavController

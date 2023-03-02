@@ -15,7 +15,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.characters.list.CharactersScreen
 import com.example.provider.NavigationProvider
-import com.example.setting.SettingsScreen
+import com.example.settings.SettingsScreen
 import com.example.theme.RalewayFonts
 import com.example.theme.SampleColors
 import com.example.theme.selectedBottomItemColor

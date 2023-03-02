@@ -1,4 +1,4 @@
-package com.example.setting
+package com.example.settings
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.PaddingValues
@@ -10,7 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.setting.view.SettingsContent
+import com.example.settings.view.SettingsContent
 import com.example.component.widget.SampleToolbar
 import com.example.provider.NavigationProvider
 import com.example.theme.SampleTheme

@@ -1,4 +1,4 @@
-package com.example.setting.about
+package com.example.settings.about
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
